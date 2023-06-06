@@ -46,26 +46,20 @@ class _SplashScreenState extends State<SplashScreen>
       parent: controller,
       curve: Curves.easeOutBack,
     );
-    SizeConfig().init(context, 840, 365);
+    SizeConfig().init(context, 896, 386);
     return Scaffold(
       //backgroundColor: kPRYCOLOUR,
-      body: Container(
-        decoration: const BoxDecoration(
-            image: DecorationImage(
-                image: AssetImage('assets/images/splash.png'),
-                fit: BoxFit.fill)),
-        child: Center(
-          child: SizedBox(
-            height: autoAdjustHeight(250),
-            width: autoAdjustWidth(250),
-            child: ScaleTransition(
-              scale: animation,
-              child: Image.asset(
-                'assets/images/mainlogo.png',
-                height: autoAdjustHeight(85),
-                width: autoAdjustWidth(240),
-                fit: BoxFit.contain,
-              ),
+      body: Center(
+        child: SizedBox(
+          height: autoAdjustHeight(250),
+          width: autoAdjustWidth(250),
+          child: ScaleTransition(
+            scale: animation,
+            child: Image.asset(
+              'assets/images/mainlogo.png',
+              height: autoAdjustHeight(85),
+              width: autoAdjustWidth(240),
+              fit: BoxFit.contain,
             ),
           ),
         ),
